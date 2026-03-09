@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EcoAI Cáceres</title>
+<style>
+
+body{
+font-family: Arial;
+background:#e8f5e9;
+text-align:center;
+}
+
+h1{
+color:#2e7d32;
+}
+
+.chat{
+width:400px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+input{
+width:70%;
+padding:10px;
+}
+
+button{
+padding:10px;
+background:#2e7d32;
+color:white;
+border:none;
+}
+
+.resposta{
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🌎 EcoAI Cáceres</h1>
+<p>Inteligência Artificial para ajudar o meio ambiente</p>
+
+<div class="chat">
+
+<input id="pergunta" placeholder="Digite seu problema ambiental">
+
+<button onclick="responder()">Perguntar</button>
+
+<div class="resposta" id="resposta"></div>
+
+</div>
+
+<script>
+
+function responder(){
+
+let pergunta = document.getElementById("pergunta").value.toLowerCase()
+let resposta = ""
+
+if(pergunta.includes("lixo")){
+resposta = "Sugestão da EcoAI: criar pontos de coleta seletiva e campanhas educativas."
+}
+
+else if(pergunta.includes("queimada")){
+resposta = "Sugestão da EcoAI: denunciar ao órgão ambiental e promover reflorestamento."
+}
+
+else if(pergunta.includes("agua")){
+resposta = "Sugestão da EcoAI: reduzir desperdício e proteger rios da região."
+}
+
+else{
+resposta = "EcoAI ainda está aprendendo. Registre o problema para análise."
+}
+
+document.getElementById("resposta").innerText = resposta
+
+}
+
+</script>
+
+</body>
+</html>
